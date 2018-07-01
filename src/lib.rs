@@ -82,7 +82,7 @@ impl PlayerBackend for RodioBackend {
     }
 
     fn current(&self) -> Option<Track> {
-        self.queue.get(self.current_index).cloned()
+        self.current_track.cloned()
     }
 
     fn prev(&mut self) -> Result<Option<()>, Error> {
